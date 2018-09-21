@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  templateUrl: './register-client.component.html',
+  styleUrls: ['./register-client.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterClientComponent implements OnInit {
 
   private subscription: Subscription;
 
@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
 			data => {
 				if (data) {
 					console.log(data);
-					this.router.navigate([{ outlets: { clientRouter: ['login'] } }]);
+					this.router.navigate( ['client/login']);
 				} 
 			})
 	}

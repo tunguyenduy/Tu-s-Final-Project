@@ -5,10 +5,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './login-client.component.html',
+  styleUrls: ['./login-client.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginClientComponent implements OnInit {
 
   private subscription: Subscription;
 
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 			data => {
 				if (data) {
 					localStorage.setItem('username', username);
-					this.router.navigate([{ outlets: { clientRouter: ['home'] } }]);
+					this.router.navigate(['client/home']);
 					location.reload();
 				} else {
 					this.isLoginFail = true;
