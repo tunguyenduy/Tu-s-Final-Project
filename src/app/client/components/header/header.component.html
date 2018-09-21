@@ -1,0 +1,62 @@
+
+
+ 
+
+
+  <header class="header1">
+    <div class="container-menu-header">
+      <div class="wrap_header">
+        <!-- Logo -->
+        <a href="#" class="logo"> <img src="../../../../assets/client/images/icons/logoMobile.png"
+           alt="IMG-LOGO" style="max-height: 50px;">
+        </a>
+        <!-- Menu -->
+        <div class="wrap_menu">
+          <nav class="menu">
+            <ul class="main_menu">
+              <li><a href="">Manufacturer</a>
+                <ul class="sub_menu">
+                  <li><a href="#">Sony</a></li>
+                  <li><a href="#">Iphone</a></li>
+                  <li><a href="#">Samsung</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Phone</a></li>
+              <li><a href="#">Tablet</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <ng-container *ngIf="!username ; else notLogin">
+          <div class="header-icons">
+            <a [routerLink]="[{ outlets: { clientRouter: ['/login'] } }]" class='header-wrapicon1 dis-block'>
+          <img src="../../../../assets/client/images/icons/icon-header-01.png"  class="header-icon1" alt="ICON">
+      </a> &nbsp;
+            <span class="linedivide1"></span>
+            <div class="header-wrapicon2">
+              <img src="../../../../assets/client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON"> <span class="header-icons-noti">0</span>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #notLogin>
+          <div class="header-icons">
+            <a href="#" class='header-wrapicon1 dis-block'>
+                                <img src="../../../../assets/client/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                            </a> &nbsp;
+            <a href="#" style="color: #005cbf; " title="Manage profile">{{username}}</a>
+            <span class="linedivide1"></span>
+            <a href='#' class='header-wrapicon1 dis-block'>
+                                <img style="width: 20px; height: 20px;" src="../../../../assets/client/images/icons/Exit_50px.png" class="header-icon1" alt="logout" title="Logout" (click) = "onLogOut()">
+                            </a>
+            <span class="linedivide1"></span>
+            <div class="header-wrapicon2">
+              <img src="../../../../assets/client/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON"> <span class="header-icons-noti">0</span>
+            </div>
+          </div>
+        </ng-template>
+</div>
+</div>
+</header>
+
